@@ -599,7 +599,7 @@ function makeTapTippy(ele) {
                         } else {
                             navigateToMessage(file_name, messageId);
                         }
-                        closeModal();
+                        // closeModal();
                         tip.hide();  // Hide this full info panel
                         resetLegendHighlight(theCy);  // Reset the legend highlight state
                         restoreElements(theCy);  // Remove remaining highlights, if any (from text search)
@@ -623,7 +623,7 @@ function makeTapTippy(ele) {
                             navigateToMessage(file_name, messageId, ele.data('swipeId'), true);
                         else
                             navigateToMessage(file_name, messageId, null, true);
-                        closeModal();
+                        // closeModal();
                         tip.hide();  // Hide this full info panel
                         resetLegendHighlight(theCy);  // Reset the legend highlight state
                         restoreElements(theCy);  // Remove remaining highlights, if any (from text search)
