@@ -6,7 +6,7 @@
     /* Increase this value as needed */
     left: 0;
     top: 0;
-    width: 100vw;
+    width: 33.33%; 
     /* covers the entire width of the viewport */
     height: 100vh;
     /* covers the entire height of the viewport */
@@ -31,8 +31,8 @@
 }
 
 .graph-container {  /* Top-level container for the timeline graph and the legend */
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     overflow: hidden;
 }
 
