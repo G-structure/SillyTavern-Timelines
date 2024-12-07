@@ -7,8 +7,6 @@
     top: 0;
     width: 100vw; /* Covers the entire width of the viewport */
     height: 100vh; /* Covers the entire height of the viewport */
-    display: flex; /* Use flexbox for layout */
-    justify-content: flex-end; /* Push content to the right half */
 }
 
 /* The inner modal, containing the actual Timelines window */
@@ -20,10 +18,14 @@
     text-shadow: 0px 0px calc(var(--shadowWidth) * 1px) var(--SmartThemeShadowColor);
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Adjust width to half of the screen */
-    height: 100%; /* Full height of the viewport */
+    width: 50%; /* Take up half the screen width */
+    height: 90vh; /* Adjust height as needed, here 90% of the viewport height */
+    position: fixed;
+    top: 5%; /* Offset vertically (centered within 90vh height) */
+    left: 50%; /* Start at the middle of the screen */
+    transform: translateX(-50%); /* Pull back to fully occupy the right half */
+    box-sizing: border-box; /* Ensure padding and border are included */
     overflow: hidden;
-    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 /* The graph container and legend remain the same */
