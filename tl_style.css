@@ -23,7 +23,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 100%; /* Match the modal's width */
-    height: 90%; /* Adjust height as needed */
+    height: 100%; /* Adjust height as needed */
     box-sizing: border-box; /* Include padding and border in dimensions */
     overflow: hidden;
 }
