@@ -1378,11 +1378,11 @@ function setupEventHandlers(cy, nodeData) {
         } else {
             navigateToMessage(file_name, messageId);
         }
-        closeModal();
+        //closeModal();
         closeTapTippy();
         closeTippy();
-        resetLegendHighlight(cy);  // Reset the legend highlight state
-        restoreElements(cy);  // Remove remaining highlights, if any (from text search, and edge highlighting)
+        //resetLegendHighlight(cy);  // Reset the legend highlight state
+        //restoreElements(cy);  // Remove remaining highlights, if any (from text search, and edge highlighting)
     });
 
     // Long-tap a node to reveal/hide related swipe nodes
