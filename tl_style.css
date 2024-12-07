@@ -1,15 +1,19 @@
-/* The invisible outer modal, covering the whole viewport */
 .modal {
     display: none;
     position: fixed;
     z-index: 9999; /* Ensure it overlays everything */
-    left: 0;
     top: 0;
-    width: 100vw; /* Covers the entire width of the viewport */
-    height: 100vh; /* Covers the entire height of the viewport */
+    left: 50%; /* Start at the middle of the viewport */
+    width: 50%; /* Take up the right half of the screen */
+    height: 100vh; /* Full height of the viewport */
+    box-sizing: border-box; /* Include padding and borders in dimensions */
+    display: flex; /* Use flex to layout children if needed */
+    justify-content: center; /* Center content horizontally within the modal */
+    align-items: center; /* Center content vertically within the modal */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a translucent background */
 }
 
-/* The inner modal, containing the actual Timelines window */
+/* The inner modal content, containing the actual timelines window */
 #networkContainer {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(var(--SmartThemeBlurStrength));
@@ -18,15 +22,10 @@
     text-shadow: 0px 0px calc(var(--shadowWidth) * 1px) var(--SmartThemeShadowColor);
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Take up half the screen width */
-    height: 90vh; /* Adjust height as needed, here 90% of the viewport height */
-    position: fixed;
-    top: 5%; /* Offset vertically (5% from the top of the viewport) */
-    left: 50%; /* Start positioning at the center of the viewport */
+    width: 100%; /* Match the modal's width */
+    height: 90%; /* Adjust height as needed */
     box-sizing: border-box; /* Include padding and border in dimensions */
     overflow: hidden;
-    /* Remove translate to keep it on the right half */
-    transform: translateX(0); /* Ensure it's aligned exactly on the right */
 }
 
 /* The graph container and legend remain the same */
