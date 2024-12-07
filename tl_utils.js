@@ -161,8 +161,8 @@ export function closeModal() {
     }
 
     // Append the modal back to its original parent (to store it while closed)
-    // document.querySelector('.timelines-modal-storage').appendChild(modal);
-    // modal.style.display = 'none';
+    document.querySelector('.timelines-modal-storage').appendChild(modal);
+    modal.style.display = 'none';
 }
 
 /**
@@ -213,7 +213,7 @@ export function handleModalDisplay() {
     // See e.g. https://wesbos.com/javascript/06-serious-practice-exercises/click-outside-modal
     modal.onclick = function (event) {
         if (event.target == modal) {  // outer div itself clicked (as opposed to something inside it clicked)
-            closeModal();
+            // closeModal();
             closeTippy();
         }
     };
