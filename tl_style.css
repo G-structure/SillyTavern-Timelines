@@ -2,17 +2,16 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 9999;
-    /* Increase this value as needed */
+    z-index: 9999; /* Ensure it overlays everything */
     left: 0;
     top: 0;
-    width: 33.33%; 
-    /* covers the entire width of the viewport */
-    height: 100vh;
-    /* covers the entire height of the viewport */
+    width: 100vw; /* Covers the entire width of the viewport */
+    height: 100vh; /* Covers the entire height of the viewport */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Push content to the right half */
 }
 
-/* The inner modal, containing the actual Timeslines window */
+/* The inner modal, containing the actual Timelines window */
 #networkContainer {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(var(--SmartThemeBlurStrength));
@@ -21,23 +20,20 @@
     text-shadow: 0px 0px calc(var(--shadowWidth) * 1px) var(--SmartThemeShadowColor);
     padding: 20px;
     border: 1px solid #888;
-    width: 90vw;
-    height: 90vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 50%; /* Adjust width to half of the screen */
+    height: 100%; /* Full height of the viewport */
+    overflow: hidden;
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* The graph container and legend remain the same */
+.graph-container {  
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
-.graph-container {  /* Top-level container for the timeline graph and the legend */
-    height: 50%;
-    width: 50%;
-    overflow: hidden;
-}
-
-#timelinesDiagramDiv {  /* The container for the timeline graph */
-    /* Make the diagram take the full space of the modal content */
+#timelinesDiagramDiv {  
     position: absolute;
     top: 0;
     left: 0;
@@ -45,17 +41,17 @@
     bottom: 0;
 }
 
-.legend-bottom-right {  /* The container for the legend */
+.legend-bottom-right {
     position: absolute;
-    bottom: 10px; /* Offset from the bottom */
-    right: 10px; /* Offset from the right */
-    z-index: 10; /* Ensures it stays on top */
+    bottom: 10px; 
+    right: 10px; 
+    z-index: 10;
     overflow-y: scroll;
     max-height: 90%;
     border: 1px solid var(--SmartThemeBorderColor);
     padding: 5px;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+    background-color: rgba(0, 0, 0, 0.7); 
     backdrop-filter: blur(var(--SmartThemeBlurStrength));
 }
 
