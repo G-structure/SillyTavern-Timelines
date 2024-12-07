@@ -21,11 +21,12 @@
     width: 50%; /* Take up half the screen width */
     height: 90vh; /* Adjust height as needed, here 90% of the viewport height */
     position: fixed;
-    top: 5%; /* Offset vertically (centered within 90vh height) */
-    left: 50%; /* Start at the middle of the screen */
-    transform: translateX(-50%); /* Pull back to fully occupy the right half */
-    box-sizing: border-box; /* Ensure padding and border are included */
+    top: 5%; /* Offset vertically (5% from the top of the viewport) */
+    left: 50%; /* Start positioning at the center of the viewport */
+    box-sizing: border-box; /* Include padding and border in dimensions */
     overflow: hidden;
+    /* Remove translate to keep it on the right half */
+    transform: translateX(0); /* Ensure it's aligned exactly on the right */
 }
 
 /* The graph container and legend remain the same */
